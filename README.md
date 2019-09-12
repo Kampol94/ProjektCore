@@ -1,5 +1,7 @@
 # ProjektCore
 
+
+
 Cele projektu
 -stworzenie Core Web API
 -połączenie serwisu z bazą danych Northwind
