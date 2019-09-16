@@ -9,4 +9,5 @@ Cele projektu
 - stworzenia prostej aplikacji SPA przy użyciu biblioteki Angular
 - stworzenie aplikacji dla Windowsa przy użyciu XAML i Fluent Design UWP
 - stworzenie aplikacji mobilnej przy użyciu XAML i Xamarin.Forms
-  - tworzenie aplikacji przy użyciu Windows Template Studio
+  - stworzenie aplikacji przy użyciu Windows Template Studio
+- stworzenie aplikacji mobilnych przy użyciu Xamarin.Forms. Aplikacja będzie umożliwiała zarządzanie klientami w bazie danych Northwind
