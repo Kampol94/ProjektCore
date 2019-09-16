@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="ProjektCoreUWP.ProduktyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProjektCoreUWP"
+    xmlns:nw="using:Packt.CS7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <local:IdKategoriiDoObrazka x:Key="idDoObrazka"/>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ParallaxView Source="{x:Bind ForegroundElement}" VerticalShift="50">
+            <Image x:Name="BackgroundImage" Source="Assets/kategorie.jpeg" Stretch="Uniform"/>
+        </ParallaxView>
+
+        <ListView x:Name="ForegroundElement" ItemsSource="{x:Bind ViewModel.Produkty}">
+            <ListView.Header>
+                <Grid Padding="20" Background="{ThemeResource SystemControlAcrylicElementBrush}">
+                    <TextBlock Style="{StaticResource TitleTextBlockStyle}" FontSize="24" VerticalAlignment="Center" Margin="12,0" Text="Kategorie"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="nw:Product">
+                    <Grid Margin="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{x:Bind CategoryID, Converter={StaticResource idDoObrazka}}" Stretch="UniformToFill" Height="200" Width="300"/>
+                        <StackPanel Background="{ThemeResource SystemControlAcrylicElementMediumHighBrush}" Padding="10" Grid.Column="1">
+                            <TextBlock Text="{x:Bind ProductName}" FontSize="20"/>
+                            <TextBlock Text="{x:Bind UnitPrice}" FontSize="16"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+</Page>

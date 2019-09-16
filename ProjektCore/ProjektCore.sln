@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BibliotekaEncjiNorthwind", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerwisNorthwind", "..\SerwisNorthwind\SerwisNorthwind.csproj", "{974ACCC2-888F-41D1-BA60-8799F6984F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplikacjaAngular", "AplikacjaAngular\AplikacjaAngular.csproj", "{5BB4B525-5AE8-4100-A1F8-F44CF86FFEB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AplikacjaAngular", "AplikacjaAngular\AplikacjaAngular.csproj", "{5BB4B525-5AE8-4100-A1F8-F44CF86FFEB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,9 +37,9 @@ Global
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x64.ActiveCfg = Debug|x64
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x64.Build.0 = Debug|x64
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x64.Deploy.0 = Debug|x64
-		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.ActiveCfg = Debug|x86
-		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.Build.0 = Debug|x86
-		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.Deploy.0 = Debug|x86
+		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.ActiveCfg = Debug|x64
+		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.Build.0 = Debug|x64
+		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Debug|x86.Deploy.0 = Debug|x64
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Release|Any CPU.ActiveCfg = Release|x86
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Release|ARM.ActiveCfg = Release|ARM
 		{76762A87-604B-4EEB-94E1-2A6A999B590D}.Release|ARM.Build.0 = Release|ARM
