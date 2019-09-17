@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjektCoreMobile.Views.ListaKlientow" Title="Lista">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding .}" IsPullToRefreshEnabled="True" ItemTapped="Customer_Tapped" Refreshing="Customer_Refreshing">
+            <ListView.Header>
+                <Label Text="Klienci" BackgroundColor="Silver"/>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding CompanyName}" Detail="{Binding Location}">
+                        <TextCell.ContextActions>
+                            <MenuItem Clicked="Customer_Phoned" Text="Zadzwon"/>
+                            <MenuItem Clicked="Customer_Deleted" Text="Usun" IsDestructive="True"/>
+                        </TextCell.ContextActions>
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Dodaj" Activated="Add_Activated" Order="Primary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
