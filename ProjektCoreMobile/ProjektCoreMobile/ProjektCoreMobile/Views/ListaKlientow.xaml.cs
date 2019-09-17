@@ -19,19 +19,19 @@ namespace ProjektCoreMobile.Views
 		public ListaKlientow ()
 		{
 			InitializeComponent ();
-            //var client = new HttpClient();
-            //client.BaseAddress = new Uri("http://localhost:5001/api/customers");
-            //client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //HttpResponseMessage respone = client.GetAsync("").Result;
-            //respone.EnsureSuccessStatusCode();
-            //string content = respone.Content.ReadAsStringAsync().Result;
-            //var customersFromService = JsonConvert.DeserializeObject<IEnumerable<Customer>>(content);
-            //foreach (Customer customer in customersFromService.OrderBy(c => c.CompanyName))
-            //{
-            //    Customer.Customers.Add(customer);
-            //}
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("http://192.168.0.150:45455/api/customers");
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage respone = client.GetAsync("").Result;
+            respone.EnsureSuccessStatusCode();
+            string content = respone.Content.ReadAsStringAsync().Result;
+            var customersFromService = JsonConvert.DeserializeObject<IEnumerable<Customer>>(content);
+            foreach (Customer customer in customersFromService.OrderBy(c => c.CompanyName))
+            {
+                Customer.Customers.Add(customer);
+            }
 
-            Customer.SampleData();
+            // Customer.SampleData();
             BindingContext = Customer.Customers;
 		}
 
